@@ -13,8 +13,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configurar CMake
-        uses: lukka/get-cmake@latest
+      - name: Configurar entorno de Visual Studio
+        uses: ilammy/msvc-dev-cmd@v1
 
       - name: Configurar proyecto
         run: cmake -B build -G "Visual Studio 17 2022" -A x64
